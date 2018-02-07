@@ -1,6 +1,6 @@
 {
   "name": "rapla-parser-js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A parsing library for rapla timetable management systems.",
   "keywords": [
     "rapla",
