@@ -1,11 +1,15 @@
 {
   "name": "rapla-parser-js",
-  "version": "3.0.0",
+  "version": "2.0.0",
   "description": "A parsing library for rapla timetable management systems.",
   "keywords": [
     "rapla",
     "parser"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhbw-timetable/rapla-parser-js.git"
+  },
   "main": "rapla-parser.js",
   "author": "Hendrik Ulbrich <hendrikulbrich@outlook.de> (hendrikulbrich.de)",
   "license": "MIT",
@@ -13,5 +17,6 @@
     "moment": "^2.20.1",
     "jsdom": "11.6.0",
     "request": "2.83.0"
-  }
+  },
+  "homepage": "https://dhbw-timetable.github.io/infopage/"
 }
