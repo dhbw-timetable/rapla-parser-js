@@ -8,7 +8,7 @@ $ npm install rapla-parser-js
 ```
 Afterwards you will be able to fetch your events through providing a rapla link:
 ```
-var parser = require("./rapla-parser.js");
+var parser = require("rapla-parser-js");
 var moment = require("moment");
 
 parser.fetchWeeks(
