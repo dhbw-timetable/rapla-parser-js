@@ -1,0 +1,19 @@
+{
+  "name": "rapla-parser-js",
+  "version": "1.0.0",
+  "description": "A parsing library for rapla timetable management systems.",
+  "main": "index.js",
+  "keywords": [
+    "rapla",
+    "parser"
+  ],
+  "author": "Hendrik Ulbrich",
+  "license": "MIT",
+  "devDependencies": {
+    "jsdom": "11.6.0",
+    "request": "2.83.0"
+  },
+  "dependencies": {
+    "moment": "^2.20.1"
+  }
+}
