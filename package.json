@@ -14,9 +14,9 @@
   "author": "Hendrik Ulbrich <hendrikulbrich@outlook.de> (hendrikulbrich.de)",
   "license": "MIT",
   "dependencies": {
+    "jsdom": "^11.11.0",
     "moment": "^2.20.1",
-    "jsdom": "11.6.0",
-    "request": "2.83.0"
+    "request": "^2.87.0"
   },
   "homepage": "https://dhbw-timetable.github.io/infopage/"
 }
