@@ -41,8 +41,6 @@ function putDates(tempEvent, tempMoment, anchorElement) {
     }
   }
 
-  console.log(`time: ${time}`);
-
   let times = time.split('-');
   tempEvent.startDate = applyMoment(tempMoment, times[0]).format('HH:mm DD.MM.YYYY');
   tempEvent.endDate = applyMoment(tempMoment, times[1]).format('HH:mm DD.MM.YYYY');
@@ -71,9 +69,9 @@ function fetchWeek(url, moment, onDone, onError, sharedObj) {
     let weekTableRows = document.querySelectorAll('table.week_table > tbody > tr');
     weekTableRows.forEach(tr => {
       tr.childNodes.forEach(td => {
-        if (td.className === 'week_block') {
+        if (td.className && td.className.startsWith('week_block')) {
           addEvent(events, tempMoment, td.querySelector('a'));
-        } else if (td.className === 'week_separatorcell') {
+        } else if (td.className && td.className.startsWith('week_separatorcell')) {
           tempMoment.add(1, 'days');
         }
       });
