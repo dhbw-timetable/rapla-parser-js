@@ -18,5 +18,9 @@
     "moment": "^2.20.1",
     "request": "^2.87.0"
   },
-  "homepage": "https://dhbw-timetable.github.io/infopage/"
+  "homepage": "https://dhbw-timetable.github.io/infopage/",
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0"
+  }
 }

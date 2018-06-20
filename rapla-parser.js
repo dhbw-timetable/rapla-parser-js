@@ -47,6 +47,8 @@ function putDates(tempEvent, tempMoment, anchorElement) {
 }
 
 function addEvent(events, tempMoment, anchorElement) {
+  console.log(tempMoment.format('DD.MM.YYYY'));
+
   tempEvent = {};
 
   // Write the time
@@ -62,6 +64,7 @@ function addEvent(events, tempMoment, anchorElement) {
 
 function fetchWeek(url, moment, onDone, onError, sharedObj) {
   let events = [], tempMoment = moment.clone();
+
   request(`${url}&day=${moment.date()}&month=${moment.month()+1}&year=${moment.year()}`, (err, res, body) => {
     if (err && onError) return onError(err);
     const { document } = new JSDOM(body).window;
@@ -75,7 +78,7 @@ function fetchWeek(url, moment, onDone, onError, sharedObj) {
         }
       });
       // reset date here
-      tempDate = moment.clone();
+      tempMoment = moment.clone();
     });
     sharedObj[moment.format('DD.MM.YYYY')] = events;
     onDone();
@@ -91,7 +94,7 @@ function fetchWeeks(url, startMoment, endMoment, onDone, onError) {
     weekPromises.push(new Promise(
       (resolve, reject) => fetchWeek(url, startMoment.clone(), resolve, reject, sharedObj)
     ));
-    startMoment.add(7, 'days')
+    startMoment.add(7, 'days');
   } while (!startMoment.isAfter(endMoment));
 
   Promise.all(weekPromises).then(() => { onDone(sharedObj); }).catch(onError);
