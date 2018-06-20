@@ -47,8 +47,6 @@ function putDates(tempEvent, tempMoment, anchorElement) {
 }
 
 function addEvent(events, tempMoment, anchorElement) {
-  console.log(tempMoment.format('DD.MM.YYYY'));
-
   tempEvent = {};
 
   // Write the time
