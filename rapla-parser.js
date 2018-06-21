@@ -41,6 +41,10 @@ function putDates(tempEvent, tempMoment, anchorElement) {
     }
   }
 
+  if (!time) {
+    time = '08:00-18:00';
+  }
+
   let times = time.split('-');
   tempEvent.startDate = applyMoment(tempMoment, times[0]).format('HH:mm DD.MM.YYYY');
   tempEvent.endDate = applyMoment(tempMoment, times[1]).format('HH:mm DD.MM.YYYY');
